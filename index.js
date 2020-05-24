@@ -20,6 +20,8 @@ const PORT = process.env.PORT || 4000;
 // importar rutas
 app.use('/api/usuarios', require('./routes/usuarios'));
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/rutinas', require('./routes/rutinas'));
+app.use('/api/checkPoints', require('./routes/checkPoints'));
 
 // definir la pagina principal
 app.get('/',(req,res)=>{
