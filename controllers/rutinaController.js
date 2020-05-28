@@ -44,11 +44,11 @@ exports.actualizarRutina = async (req, res) =>{
         return res.status(400).json({errores: errores.array()})
     }
 
-    const {nombre, serie, repeticiones } = req.body;
+    const {nombre, series, repeticiones } = req.body;
     const nuevoRutina={};
 
     nuevoRutina.nombre = nombre;
-    nuevoRutina.serie = serie;
+    nuevoRutina.series = series;
     nuevoRutina.repeticiones = repeticiones;
 
     try {

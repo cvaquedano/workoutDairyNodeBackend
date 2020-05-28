@@ -26,7 +26,7 @@ exports.CrearCheckPoint = async (req, res) =>{
 exports.obtenerCheckPoints = async (req, res) =>{
 
     try {
-        const checkPoints = await CheckPoint.find({creador : req.usuario.id}).sort({creado: -1});
+        const checkPoints = await CheckPoint.find({creador : req.usuario.id}).sort({registro: -1});
 
         res.json({checkPoints});
     } catch (error) {
